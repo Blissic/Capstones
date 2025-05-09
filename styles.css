@@ -3,5 +3,7 @@ body{
 }
 
 nav{
+position: fixed;
+display: black;
 background-color: red;
 }
