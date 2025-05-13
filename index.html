@@ -3,158 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetKids - Learn About Networks</title>
+    <title>Network Fundamentals</title>
     <style>
+        :root {
+            --primary-dark: #0d2b0d;
+            --primary: #1e4e1e;
+            --primary-light: #2d6d2d;
+            --accent: #4CAF50;
+            --text: #f5f5f5;
+            --text-light: #e0e0e0;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #003300;
-            color: #e6ffe6;
+            background-color: var(--primary-dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
             display: flex;
+            min-height: 100vh;
         }
         
         .sidebar {
-            width: 180px;
-            background-color: #004d00;
-            padding: 10px;
-            height: 100vh;
-            position: fixed;
-        }
-        
-        .logo {
-            text-align: center;
-            padding: 10px 0;
-            border-bottom: 2px solid #00aa00;
-            margin-bottom: 20px;
-        }
-        
-        .logo h1 {
-            color: #ffff00;
-            font-size: 20px;
-            margin: 5px 0;
-        }
-        
-        .menu {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .menu li {
-            margin-bottom: 10px;
-        }
-        
-        .menu a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 8px;
-            background-color: #006600;
-            border-radius: 5px;
-        }
-        
-        .menu a:hover {
-            background-color: #008800;
+            width: 220px;
+            background-color: var(--primary);
+            padding: 2rem 1rem;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
         }
         
         .main-content {
-            margin-left: 200px;
-            padding: 20px;
-            width: calc(100% - 200px);
+            flex: 1;
+            padding: 2rem;
         }
         
-        .header {
-            background-color: #004d00;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
+        .logo {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--primary-light);
         }
         
-        .header h2 {
-            color: #ffff00;
+        .logo h1 {
+            color: var(--text);
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .logo p {
+            color: var(--text-light);
+            margin: 0.5rem 0 0;
+            font-size: 0.9rem;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            padding: 0;
             margin: 0;
         }
         
-        .content-box {
-            background-color: #004d00;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border-left: 5px solid #00aa00;
+        .nav-menu li {
+            margin-bottom: 0.5rem;
         }
         
-        .content-box h3 {
-            color: #ffff00;
+        .nav-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-menu a:hover, .nav-menu a.active {
+            background-color: var(--primary-light);
+            color: white;
+        }
+        
+        .nav-menu i {
+            margin-right: 0.75rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .content-header {
+            margin-bottom: 2rem;
+        }
+        
+        .content-header h2 {
+            color: white;
+            margin: 0 0 0.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .content-header p {
+            color: var(--text-light);
+            margin: 0;
+        }
+        
+        .card {
+            background-color: var(--primary);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            color: var(--accent);
             margin-top: 0;
+            margin-bottom: 1rem;
         }
         
-        .fun-fact {
-            background-color: #006600;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            font-style: italic;
+        .card p {
+            margin: 0.5rem 0;
         }
         
         .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding: 10px;
-            background-color: #004d00;
-            border-radius: 5px;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--primary-light);
+            color: var(--text-light);
+            font-size: 0.9rem;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <h1>NetKids</h1>
-            <div>Learn About Networks</div>
-        </div>
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">What is a Network?</a></li>
-            <li><a href="#">Internet Basics</a></li>
-            <li><a href="#">Wi-Fi Explained</a></li>
-            <li><a href="#">Online Safety</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Quiz</a></li>
-        </ul>
-    </div>
-    
-    <div class="main-content">
-        <div class="header">
-            <h2>Welcome to NetKids!</h2>
-            <p>Learn how computers talk to each other</p>
-        </div>
-        
-        <div class="content-box">
-            <h3>How the Internet Works</h3>
-            <p>Computers connect together to form networks. The Internet is just a huge network of computers all around the world!</p>
-            <div class="fun-fact">
-                Fun Fact: The first message sent over the Internet was "LO" - they were trying to send "LOGIN" but the system crashed!
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Network Fundamentals</h1>
+                <p>Essential networking concepts</p>
             </div>
-        </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Overview</a></li>
+                <li><a href="#"><i class="fas fa-network-wired"></i> Network Types</a></li>
+                <li><a href="#"><i class="fas fa-server"></i> Infrastructure</a></li>
+                <li><a href="#"><i class="fas fa-shield-alt"></i> Security</a></li>
+                <li><a href="#"><i class="fas fa-cloud"></i> Cloud Networking</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i> Protocols</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Resources</a></li>
+            </ul>
+        </aside>
         
-        <div class="content-box">
-            <h3>Sending Information</h3>
-            <p>When you send a message or watch a video, the information gets broken into small pieces called "packets" that travel through wires or through the air.</p>
-            <div class="fun-fact">
-                Fun Fact: Some internet cables run under the ocean between continents!
-            </div>
-        </div>
-        
-        <div class="content-box">
-            <h3>Wi-Fi Magic</h3>
-            <p>Wi-Fi uses invisible radio waves to send information through the air, just like how radios work but much faster!</p>
-            <div class="fun-fact">
-                Fun Fact: The word "Wi-Fi" doesn't actually stand for anything - it was just a catchy name!
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>© 2023 NetKids - Learn About Computer Networks</p>
-        </div>
+        <main class="main-content">
+            <header class="content-header">
+                <h2>Network Fundamentals</h2>
+                <p>Essential concepts in computer networking</p>
+            </header>
+            
+            <section class="card">
+                <h3>Network Architecture</h3>
+                <p>Modern networks are built using layered architectures that separate functionality into distinct components. The OSI model divides network communication into seven layers, while the TCP/IP model uses four layers.</p>
+                <p>Understanding these models helps in troubleshooting network issues and designing efficient systems.</p>
+            </section>
+            
+            <section class="card">
+                <h3>Transmission Media</h3>
+                <p>Networks utilize various transmission media including twisted pair copper cables, fiber optics, and wireless radio frequencies. Each medium has distinct characteristics affecting bandwidth, latency, and deployment scenarios.</p>
+                <p>Fiber optics dominate long-distance connections due to high bandwidth and low signal degradation.</p>
+            </section>
+            
+            <section class="card">
+                <h3>Network Protocols</h3>
+                <p>Protocols define the rules for communication between devices. Key protocols include TCP/IP for reliable transmission, UDP for low-latency applications, and HTTP/HTTPS for web traffic.</p>
+                <p>Modern networks increasingly adopt IPv6 to address the limitations of IPv4 addressing.</p>
+            </section>
+            
+            <footer class="footer">
+                <p>© 2023 Network Fundamentals | Educational Resource</p>
+            </footer>
+        </main>
     </div>
 </body>
 </html>
