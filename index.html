@@ -1,63 +1,38 @@
-<html>
-<head>
-   <link rel="stylesheet" href="styles.css">
-  <title>
-    Networking 101
-  </title>
-</head>
-<body>
-   <div class="nav">Hello World</nav>
-Hello World
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetFun - Learn About Computer Networks!</title>
+    <title>NetKids - Learn About Networks</title>
     <style>
-        :root {
-            --primary-blue: #0a1f3d;
-            --secondary-blue: #1a3b6d;
-            --accent-blue: #3a7bd5;
-            --highlight-yellow: #ffde59;
-            --text-light: #e6f1ff;
-        }
-        
         body {
-            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--primary-blue);
-            color: var(--text-light);
+            background-color: #003300;
+            color: #e6ffe6;
             display: flex;
-            min-height: 100vh;
         }
         
         .sidebar {
-            width: 200px;
-            background-color: var(--secondary-blue);
-            padding: 20px;
-            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+            width: 180px;
+            background-color: #004d00;
+            padding: 10px;
+            height: 100vh;
             position: fixed;
-            height: 100%;
-            overflow-y: auto;
         }
         
         .logo {
             text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .logo img {
-            width: 120px;
-            height: auto;
+            padding: 10px 0;
+            border-bottom: 2px solid #00aa00;
+            margin-bottom: 20px;
         }
         
         .logo h1 {
-            color: var(--highlight-yellow);
-            font-size: 24px;
-            margin: 10px 0 0;
+            color: #ffff00;
+            font-size: 20px;
+            margin: 5px 0;
         }
         
         .menu {
@@ -66,221 +41,120 @@ Hello World
         }
         
         .menu li {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
         .menu a {
             display: block;
-            color: var(--text-light);
+            color: white;
             text-decoration: none;
-            padding: 10px;
-            border-radius: 8px;
-            transition: all 0.3s;
-            font-size: 18px;
+            padding: 8px;
+            background-color: #006600;
+            border-radius: 5px;
         }
         
-        .menu a:hover, .menu a.active {
-            background-color: var(--accent-blue);
-            transform: scale(1.05);
-        }
-        
-        .menu-icon {
-            margin-right: 10px;
-            font-size: 20px;
+        .menu a:hover {
+            background-color: #008800;
         }
         
         .main-content {
-            margin-left: 240px;
-            padding: 30px;
-            flex: 1;
+            margin-left: 200px;
+            padding: 20px;
+            width: calc(100% - 200px);
         }
         
         .header {
-            background-color: var(--secondary-blue);
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background-color: #004d00;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
         
         .header h2 {
-            color: var(--highlight-yellow);
-            font-size: 32px;
+            color: #ffff00;
             margin: 0;
         }
         
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+        .content-box {
+            background-color: #004d00;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border-left: 5px solid #00aa00;
         }
         
-        .card {
-            background-color: var(--secondary-blue);
-            border-radius: 15px;
-            padding: 20px;
-            width: 280px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-            border: 2px solid var(--accent-blue);
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-        }
-        
-        .card-icon {
-            font-size: 50px;
-            color: var(--highlight-yellow);
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        
-        .card h3 {
-            color: var(--highlight-yellow);
+        .content-box h3 {
+            color: #ffff00;
             margin-top: 0;
-            font-size: 22px;
-        }
-        
-        .card p {
-            font-size: 16px;
-            line-height: 1.5;
         }
         
         .fun-fact {
-            background-color: var(--accent-blue);
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
+            background-color: #006600;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
             font-style: italic;
-            border-left: 5px solid var(--highlight-yellow);
         }
         
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: var(--secondary-blue);
-            border-radius: 15px;
-        }
-        
-        .robot-character {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 100px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        
-        .robot-character:hover {
-            transform: scale(1.1) rotate(10deg);
-        }
-        
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-            
-            .main-content {
-                margin-left: 0;
-                padding: 20px;
-            }
-            
-            .card {
-                width: 100%;
-            }
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #004d00;
+            border-radius: 5px;
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="sidebar">
         <div class="logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/2285/2285533.png" alt="NetFun Logo">
-            <h1>NetFun</h1>
+            <h1>NetKids</h1>
+            <div>Learn About Networks</div>
         </div>
         <ul class="menu">
-            <li><a href="#" class="active"><i class="fas fa-home menu-icon"></i> Home</a></li>
-            <li><a href="#"><i class="fas fa-network-wired menu-icon"></i> What's a Network?</a></li>
-            <li><a href="#"><i class="fas fa-wifi menu-icon"></i> Wireless Magic</a></li>
-            <li><a href="#"><i class="fas fa-shield-alt menu-icon"></i> Stay Safe Online</a></li>
-            <li><a href="#"><i class="fas fa-gamepad menu-icon"></i> Network Games</a></li>
-            <li><a href="#"><i class="fas fa-video menu-icon"></i> Videos</a></li>
-            <li><a href="#"><i class="fas fa-question-circle menu-icon"></i> Quiz</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">What is a Network?</a></li>
+            <li><a href="#">Internet Basics</a></li>
+            <li><a href="#">Wi-Fi Explained</a></li>
+            <li><a href="#">Online Safety</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Quiz</a></li>
         </ul>
     </div>
     
     <div class="main-content">
         <div class="header">
-            <h2>Welcome to the Amazing World of Computer Networks!</h2>
-            <p>Learn how computers talk to each other in this fun adventure!</p>
+            <h2>Welcome to NetKids!</h2>
+            <p>Learn how computers talk to each other</p>
         </div>
         
-        <div class="card-container">
-            <div class="card">
-                <div class="card-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h3>Internet Backbone</h3>
-                <p>Discover how giant cables under the ocean connect the whole world together!</p>
-                <div class="fun-fact">
-                    Fun Fact: There are over 400 underwater internet cables around the world!
-                </div>
+        <div class="content-box">
+            <h3>How the Internet Works</h3>
+            <p>Computers connect together to form networks. The Internet is just a huge network of computers all around the world!</p>
+            <div class="fun-fact">
+                Fun Fact: The first message sent over the Internet was "LO" - they were trying to send "LOGIN" but the system crashed!
             </div>
-            
-            <div class="card">
-                <div class="card-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <h3>How Data Travels</h3>
-                <p>Data moves at nearly the speed of light - that's faster than a superhero!</p>
-                <div class="fun-fact">
-                    Fun Fact: Your favorite game data can travel around the world 7 times in one second!
-                </div>
+        </div>
+        
+        <div class="content-box">
+            <h3>Sending Information</h3>
+            <p>When you send a message or watch a video, the information gets broken into small pieces called "packets" that travel through wires or through the air.</p>
+            <div class="fun-fact">
+                Fun Fact: Some internet cables run under the ocean between continents!
             </div>
-            
-            <div class="card">
-                <div class="card-icon">
-                    <i class="fas fa-cloud"></i>
-                </div>
-                <h3>Cloud Power</h3>
-                <p>The cloud isn't in the sky - it's in huge buildings with millions of computers!</p>
-                <div class="fun-fact">
-                    Fun Fact: One cloud data center can store over 1,000,000,000,000 photos!
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-icon">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <h3>Secret Codes</h3>
-                <p>Learn how secret codes keep your information safe when it travels online.</p>
-                <div class="fun-fact">
-                    Fun Fact: Some codes are so strong that even supercomputers can't break them!
-                </div>
+        </div>
+        
+        <div class="content-box">
+            <h3>Wi-Fi Magic</h3>
+            <p>Wi-Fi uses invisible radio waves to send information through the air, just like how radios work but much faster!</p>
+            <div class="fun-fact">
+                Fun Fact: The word "Wi-Fi" doesn't actually stand for anything - it was just a catchy name!
             </div>
         </div>
         
         <div class="footer">
-            <p>© 2023 NetFun - Making Computer Networks Fun for Kids!</p>
-            <p>Created with <i class="fas fa-heart" style="color: #ff6b6b;"></i> by Network Wizards</p>
+            <p>© 2023 NetKids - Learn About Computer Networks</p>
         </div>
     </div>
-    
-    <img src="https://cdn-icons-png.flaticon.com/512/2593/2593308.png" alt="Friendly Robot Guide" class="robot-character" title="Hi! I'm NetBot! Click me for fun facts!">
 </body>
-</html>
-
-  
-</body>
-
-
-  
 </html>
