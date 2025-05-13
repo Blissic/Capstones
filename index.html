@@ -275,32 +275,6 @@ Hello World
     </div>
     
     <img src="https://cdn-icons-png.flaticon.com/512/2593/2593308.png" alt="Friendly Robot Guide" class="robot-character" title="Hi! I'm NetBot! Click me for fun facts!">
-    
-    <script>
-        // Simple interactive elements for kids
-        document.querySelector('.robot-character').addEventListener('click', function() {
-            const facts = [
-                "Did you know? The first computer network was created in 1969!",
-                "Wi-Fi signals can go through walls, but water can block them!",
-                "There are more internet devices than people on Earth!",
-                "The '@' symbol in email addresses is over 500 years old!",
-                "The first webcam watched a coffee pot so people knew when coffee was ready!"
-            ];
-            const randomFact = facts[Math.floor(Math.random() * facts.length)];
-            alert("NetBot says: " + randomFact);
-        });
-        
-        // Change card colors on hover for fun effect
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.borderColor = '#ffde59';
-            });
-            card.addEventListener('mouseleave', function() {
-                this.style.borderColor = '#3a7bd5';
-            });
-        });
-    </script>
 </body>
 </html>
 
