@@ -1,1 +1,186 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Fundamentals</title>
+    <style>
+        :root {
+            --primary-purple: #7B1FA2;
+            --primary-dark: #4A148C;
+            --primary-light: #E1BEE7;
+            --accent: #9C27B0;
+            --background: #FAF5FF;
+            --card-bg: #FFFFFF;
+            --text-dark: #212121;
+            --text-light: #616161;
+            --border: #D1C4E9;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 200px;
+            background-color: var(--primary-dark);
+            padding: 1.5rem 1rem;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 1.5rem;
+        }
+        
+        .logo {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--primary-light);
+        }
+        
+        .logo h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .logo p {
+            color: var(--primary-light);
+            margin: 0.3rem 0 0;
+            font-size: 0.8rem;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-menu li {
+            margin-bottom: 0.3rem;
+        }
+        
+        .nav-menu a {
+            display: block;
+            padding: 0.6rem 0.8rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .nav-menu a:hover, .nav-menu a.active {
+            background-color: var(--primary-purple);
+        }
+        
+        .nav-menu i {
+            margin-right: 0.5rem;
+            width: 16px;
+            text-align: center;
+        }
+        
+        .content-header {
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-header h2 {
+            color: var(--primary-dark);
+            margin: 0 0 0.3rem;
+            font-size: 1.5rem;
+        }
+        
+        .content-header p {
+            color: var(--text-light);
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 4px;
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
+            border-left: 4px solid var(--primary-purple);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .card h3 {
+            color: var(--primary-purple);
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+        
+        .card p {
+            margin: 0.4rem 0;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+        
+        .footer {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Network Fundamentals</h1>
+                <p>Core networking concepts</p>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Overview</a></li>
+                <li><a href="#"><i class="fas fa-network-wired"></i> Network Types</a></li>
+                <li><a href="#"><i class="fas fa-server"></i> Infrastructure</a></li>
+                <li><a href="#"><i class="fas fa-shield-alt"></i> Security</a></li>
+                <li><a href="#"><i class="fas fa-cloud"></i> Cloud</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i> Protocols</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <header class="content-header">
+                <h2>Network Fundamentals</h2>
+                <p>Essential concepts in computer networking</p>
+            </header>
+            
+            <section class="card">
+                <h3>Network Architecture</h3>
+                <p>Modern networks use layered architectures with distinct components. The OSI model has seven layers, while TCP/IP uses four layers. These models aid troubleshooting and system design.</p>
+            </section>
+            
+            <section class="card">
+                <h3>Transmission Media</h3>
+                <p>Networks use twisted pair cables, fiber optics, and wireless frequencies. Each medium affects bandwidth, latency, and deployment. Fiber optics excel in long-distance connections.</p>
+            </section>
+            
+            <section class="card">
+                <h3>Network Protocols</h3>
+                <p>Protocols define device communication rules. Key protocols include TCP/IP for reliability, UDP for low latency, and HTTP/HTTPS for web traffic. IPv6 adoption is increasing.</p>
+            </section>
+            
+            <footer class="footer">
+                <p>© 2023 Network Fundamentals</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
